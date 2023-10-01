@@ -44,7 +44,7 @@
 // require('dotenv').config();
 // const { MNEMONIC, PROJECT_ID } = process.env;
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 module.exports = {
   /**
@@ -74,6 +74,18 @@ module.exports = {
       port: 9545, // Standard Ethereum port (default: none)
       network_id: "*", // Any network (default: none)
     },
+    dev: {
+      host: "127.0.0.1", // Ganache-Cli Localhost (default: none)
+      port: 8545, // Ethereum port (default: none)
+      network_id: "*", // Any network (default: none)
+    },
+	cloud:{
+		provider: () => new HDWalletProvider({
+			privateKeys:["cf97f050e1e7487bcf0115ad22a5907fefe9dd3a7d421a9cfaaad88ab839ac1a","cf97f050e1e7487bcf0115ad22a5907fefe9dd3a7d421a9cfaaad88ab839ac1b"],
+			providerOrUrl:"https://ganache-server.onrender.com"
+		}),
+		network_id:"*"
+	}
     //
     // An additional network, but with some advanced options…
     // advanced: {
