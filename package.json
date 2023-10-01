@@ -5,10 +5,10 @@
   "scripts": {
     "dev": "next dev",
 	"build-client":	"next build",
-    "build": "npm install -g truffle && npm run build-client",
+    "build": "npm install truffle && npm run build-client",
 	"start-client":	"next start",
-    "start": "truffle migrate && npm run start-client",
-	"test":	"truffle test",
+    "start": "npx truffle migrate && npm run start-client",
+	"test":	"npx truffle test",
     "lint": "next lint"
   },
   "dependencies": {
