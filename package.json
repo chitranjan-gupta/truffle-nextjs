@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+	"build-client":	"next build",
+    "build": "npm install -g truffle && npm run build-client",
+	"start-client":	"next start",
+    "start": "truffle migrate && npm run start-client",
+	"test":	"truffle test",
     "lint": "next lint"
   },
   "dependencies": {
