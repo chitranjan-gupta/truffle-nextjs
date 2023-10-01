@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
 	"build-client":	"next build",
-    "build": "npm install truffle && npm run build-client",
+    "build": "npm install truffle && npx truffle compile && npm run build-client",
 	"start-client":	"next start",
     "start": "npx truffle migrate && npm run start-client",
 	"test":	"npx truffle test",
