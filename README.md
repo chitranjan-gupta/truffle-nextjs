@@ -22,8 +22,8 @@ npm install
 1. Copy the network url and paste in .env and truffle-config.js
 2. Now build contract and ui
    ```bash
-   npm run build
    truffle compile
+   npm run build-client
    ```
 
 ### Test
@@ -47,11 +47,11 @@ npm start
    ```bash
    truffle develop
    ```
-1. Copy the network url and paste in .env and truffle-config.js
-1. Now build contract and ui
+2. Copy the network url and paste in .env and truffle-config.js
+3. Now build contract and ui
    ```bash
-   npm run build
    truffle compile
+   npm run build-client
    ```
 
 ### Test
@@ -80,11 +80,36 @@ npm install -g ganache-cli
    ```bash
    ganache-cli
    ```
-1. Copy the network url and paste in .env and truffle-config.js
-1. Now build contract and ui
+2. Copy the network url and paste in .env and truffle-config.js
+3. Now build contract and ui
    ```bash
-   npm run build
    truffle compile
+   npm run build-client
+   ```
+
+### Test
+
+```bash
+truffle migrate
+truffle test
+```
+
+### Execute
+
+```bash
+npm start
+```
+
+## Run on Ganache Cloud
+
+### Setup
+> Deploy the [Ganache Server](https://github.com/chitranjan-gupta/Ganache-Server) on the Cloud
+
+1. Copy the public network url and paste in .env and truffle-config.js
+2. Now build contract and ui
+   ```bash
+   truffle compile
+   npm run build-client
    ```
 
 ### Test
